@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>{% block title %}Notes App{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="navbar">
@@ -9,7 +10,9 @@
         <a href="{{ url_for('add_note') }}">Add Note</a>
     </div>
     <div class="content">
-        {% block content %}{% endblock %}
+        {% block content %}
+        
+        {% endblock %}
     </div>
 </body>
 </html>
