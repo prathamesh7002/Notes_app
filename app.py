@@ -29,7 +29,7 @@ def delete_note(index):
 @app.route('/')
 def home():
     notes = read_notes()
-    return render_template('home.html', notes=notes)
+    return render_template('index.html', notes=notes)  # Changed from 'home.html' to 'index.html'
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_note():
